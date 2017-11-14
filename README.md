@@ -33,7 +33,7 @@ CurrencyQuoteRS amountQuote = ConsultGoogleFinance.exchangeCurrency(Currency.USD
 ```java
 PrintCurrencyQuote.print(quote);
 /*
-Result..
+Result...
 BRL 30.3092
 USD 10.0
 EXCHANGE RATE: 3.3092
