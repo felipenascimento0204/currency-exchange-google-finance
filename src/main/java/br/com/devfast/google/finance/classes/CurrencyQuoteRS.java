@@ -8,15 +8,15 @@ public class CurrencyQuoteRS {
 	
 	private Currency baseCurreny;
 	private Currency quoteCurrency;
-	private double baseRate;
-	private double quoteRate;
+	private double baseAmount;
+	private double quoteAmount;
 	private Date date;
 	
-	public CurrencyQuoteRS(Currency baseCurreny, Currency quoteCurrency, double baseRate) {
+	public CurrencyQuoteRS(Currency baseCurreny, Currency quoteCurrency, double quoteAmount, double baseAmount) {
 		this.baseCurreny = baseCurreny;
 		this.quoteCurrency = quoteCurrency;
-		this.baseRate = baseRate;
-		this.quoteRate = 1.0;
+		this.baseAmount = baseAmount;
+		this.quoteAmount = quoteAmount;
 		this.date = new Date();
 	}
 
@@ -28,16 +28,20 @@ public class CurrencyQuoteRS {
 		return quoteCurrency;
 	}
 
-	public double getBaseRate() {
-		return baseRate;
+	public double getBaseAmount() {
+		return baseAmount;
 	}
 
-	public double getQuoteRate() {
-		return quoteRate;
+	public double getQuoteAmount() {
+		return quoteAmount;
 	}
 
 	public Date getDate() {
 		return date;
+	}
+	
+	public double getExchangeRate(){
+		return (quoteAmount/baseAmount);
 	}
 
 }

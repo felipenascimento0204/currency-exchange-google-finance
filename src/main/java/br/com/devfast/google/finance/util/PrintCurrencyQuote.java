@@ -10,8 +10,9 @@ public class PrintCurrencyQuote {
 	public static void print(CurrencyQuoteRS quote){
 		if(quote != null){
 			StringBuilder sb = new StringBuilder();
-			sb.append(quote.getQuoteCurrency().getCode() + " " +quote.getQuoteRate()+"\n");
-			sb.append(quote.getBaseCurrency().getCode() + " " +quote.getBaseRate()+"\n");
+			sb.append(quote.getQuoteCurrency().getCode() + " " +quote.getQuoteAmount()+"\n");
+			sb.append(quote.getBaseCurrency().getCode() + " " +quote.getBaseAmount()+"\n");
+			sb.append("EXCHANGE RATE: " + quote.getExchangeRate() +"\n");
 			sb.append("QUOTE DATE: " + formatDate(quote.getDate()) + "\n");
 			System.out.println(sb.toString());
 		} else {
