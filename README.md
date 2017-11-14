@@ -10,3 +10,13 @@ CurrencyQuoteRS quote = ConsultGoogleFinance.exchangeCurrency(Currency.USD, Curr
 //exchange rate
 double baseRate = quote.getBaseRate();
 ```
+#### Print Quote
+```java
+PrintCurrencyQuote.print(quote);
+/*
+Result..
+BRL 1.0
+USD 3.3074
+QUOTE DATE: 14/11/2017 17:10
+*/
+```
