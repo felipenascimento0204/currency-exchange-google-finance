@@ -11,7 +11,7 @@ public class CurrencyExchangeTest {
 	
 	@Test
 	public void currencyExchangeTest(){
-		CurrencyQuoteRS quote = ConsultGoogleFinance.exchageCurrency(Currency.USD, Currency.BRL);
+		CurrencyQuoteRS quote = ConsultGoogleFinance.exchangeCurrency(Currency.USD, Currency.BRL);
 		Assert.assertNotNull(quote);
 		PrintCurrencyQuote.print(quote);
 	}

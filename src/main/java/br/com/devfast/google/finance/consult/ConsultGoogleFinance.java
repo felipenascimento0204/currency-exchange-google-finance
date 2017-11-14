@@ -32,7 +32,7 @@ public class ConsultGoogleFinance {
 		return exchangeCurrencyRequest(moedaBase, Currency.BRL);
 	}
 	
-	public static CurrencyQuoteRS exchageCurrency(Currency moedaBase, Currency moedaCotacao){
+	public static CurrencyQuoteRS exchangeCurrency(Currency moedaBase, Currency moedaCotacao){
 		return exchangeCurrencyRequest(moedaBase, moedaCotacao);
 	}
 
