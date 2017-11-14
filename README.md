@@ -1,6 +1,6 @@
 # currency-exchange-google-finance
 * Simple Java Project for currency exchange by Google Finance
-* Projeto Java simples para cotação de moedas atravé do Google Finance
+* Projeto Java simples para cotação de moedas através do Google Finance
 * Simple Java Proyecto para la conversión de moneda por Google Finance
 
 # Usage
