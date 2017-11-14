@@ -31,7 +31,7 @@ CurrencyQuoteRS amountQuote = ConsultGoogleFinance.exchangeCurrency(Currency.USD
 
 #### Print Amount Quote
 ```java
-PrintCurrencyQuote.print(quote);
+PrintCurrencyQuote.print(amountQuote);
 /*
 Result...
 BRL 30.3092
