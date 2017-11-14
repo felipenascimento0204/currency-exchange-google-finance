@@ -4,32 +4,32 @@ import br.com.devfast.google.finance.enums.Currency;
 
 public class CurrencyQuoteRS {
 	
-	private Currency moedaBase;
-	private Currency moedaCotacao;
-	private double taxaCambioBase;
-	private double taxaCambioCotacao;
+	private Currency baseCurreny;
+	private Currency quoteCurrency;
+	private double baseRate;
+	private double quoteRate;
 	
-	public CurrencyQuoteRS(Currency moedaBase, Currency moedaCotacao, double taxaCambioBase) {
-		this.moedaBase = moedaBase;
-		this.moedaCotacao = moedaCotacao;
-		this.taxaCambioBase = taxaCambioBase;
-		this.taxaCambioCotacao = 1.0;
+	public CurrencyQuoteRS(Currency baseCurreny, Currency quoteCurrency, double baseRate) {
+		this.baseCurreny = baseCurreny;
+		this.quoteCurrency = quoteCurrency;
+		this.baseRate = baseRate;
+		this.quoteRate = 1.0;
 	}
 
-	public Currency getMoedaBase() {
-		return moedaBase;
+	public Currency getBaseCurrency() {
+		return baseCurreny;
 	}
 
-	public Currency getMoedaCotacao() {
-		return moedaCotacao;
+	public Currency getQuoteCurrency() {
+		return quoteCurrency;
 	}
 
-	public double getTaxaCambioBase() {
-		return taxaCambioBase;
+	public double getBaseRate() {
+		return baseRate;
 	}
 
-	public double getTaxaCambioCotacao() {
-		return taxaCambioCotacao;
+	public double getQuoteRate() {
+		return quoteRate;
 	}
 
 }

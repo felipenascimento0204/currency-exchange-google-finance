@@ -7,8 +7,8 @@ public class PrintCurrencyQuote {
 	public static void print(CurrencyQuoteRS quote){
 		if(quote != null){
 			StringBuilder sb = new StringBuilder();
-			sb.append(quote.getMoedaCotacao().getCode() + " " +quote.getTaxaCambioCotacao()+"\n");
-			sb.append(quote.getMoedaBase().getCode() + " " +quote.getTaxaCambioBase()+"\n");
+			sb.append(quote.getQuoteCurrency().getCode() + " " +quote.getQuoteRate()+"\n");
+			sb.append(quote.getBaseCurrency().getCode() + " " +quote.getBaseRate()+"\n");
 			System.out.println(sb.toString());
 		} else {
 			System.out.println("não foi possível realizar uma cotação");

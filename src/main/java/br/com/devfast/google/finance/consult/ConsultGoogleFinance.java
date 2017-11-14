@@ -9,18 +9,18 @@ import br.com.devfast.google.finance.enums.Currency;
 
 public class ConsultGoogleFinance {
 	
-	private static CurrencyQuoteRS exchangeCurrencyRequest(Currency moedaBase, Currency moedaCotacao){
+	private static CurrencyQuoteRS exchangeCurrencyRequest(Currency baseCurrency, Currency quoteCurrency){
 		
 		try {
 			
 			String url = "https://finance.google.com/finance/converter?a=1&from=" 
-					+ moedaBase.getCode() + "&to=" 
-					+ moedaCotacao.getCode() + "&meta=ei%3D1q4JWuDcKpS6e6DKjOgL";
+					+ baseCurrency.getCode() + "&to=" 
+					+ quoteCurrency.getCode() + "&meta=ei%3D1q4JWuDcKpS6e6DKjOgL";
 			
 			Document doc = Jsoup.connect(url).get();
 			Elements span = doc.select("div[id=currency_converter_result] > span.bld");
 			String parsedNumber = span.get(0).ownText().replaceAll("[^0-9.]", "").trim();
-			return new CurrencyQuoteRS(moedaBase, moedaCotacao, Double.parseDouble(parsedNumber));
+			return new CurrencyQuoteRS(baseCurrency, quoteCurrency, Double.parseDouble(parsedNumber));
 			
 		} catch (Exception e) {
 			return null;
@@ -28,12 +28,12 @@ public class ConsultGoogleFinance {
 		
 	}
 	
-	public static CurrencyQuoteRS exchangeCurrency(Currency moedaBase){
-		return exchangeCurrencyRequest(moedaBase, Currency.BRL);
+	public static CurrencyQuoteRS exchangeCurrency(Currency baseCurrency){
+		return exchangeCurrencyRequest(baseCurrency, Currency.BRL);
 	}
 	
-	public static CurrencyQuoteRS exchangeCurrency(Currency moedaBase, Currency moedaCotacao){
-		return exchangeCurrencyRequest(moedaBase, moedaCotacao);
+	public static CurrencyQuoteRS exchangeCurrency(Currency baseCurrency, Currency quoteCurrency){
+		return exchangeCurrencyRequest(baseCurrency, quoteCurrency);
 	}
 
 }
