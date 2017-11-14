@@ -1,7 +1,7 @@
 # currency-exchange-google-finance
-Simple Java Project for currency exchange by Google Finance
-
+* Simple Java Project for currency exchange by Google Finance
 * Projeto Java simples para cotação de moedas atravé do Google Finance
+* Simple Java Proyecto para la conversión de moneda por Google Finance
 
 # Usage
 
@@ -11,19 +11,31 @@ Simple Java Project for currency exchange by Google Finance
 CurrencyQuoteRS quote = ConsultGoogleFinance.exchangeCurrency(Currency.USD, Currency.BRL);
 ```
 
+#### Print Simple Quote (default amount = 1.0)
+```java
+PrintCurrencyQuote.print(quote);
+/*
+Result...
+BRL 3.3092
+USD 1.0
+EXCHANGE RATE: 3.3092
+QUOTE DATE: 14/11/2017 17:51
+*/
+```
+
 #### Amount Quote
 ```java
 //execute Google Finance amount request 
 CurrencyQuoteRS amountQuote = ConsultGoogleFinance.exchangeCurrency(Currency.USD, Currency.BRL, 10.00);
 ```
 
-#### Print Quote
+#### Print Amount Quote
 ```java
 PrintCurrencyQuote.print(quote);
 /*
 Result..
-BRL 3.3092
-USD 1.0
+BRL 30.3092
+USD 10.0
 EXCHANGE RATE: 3.3092
 QUOTE DATE: 14/11/2017 17:51
 */
